@@ -161,6 +161,9 @@ repositories:
   - name: prometheus-community
     url: https://prometheus-community.github.io/helm-charts
 
+  - name: grafana-community
+    url: https://grafana-community.github.io/helm-charts
+
 releases:
   - name: my-prometheus
     namespace: monitoring
@@ -173,7 +176,7 @@ releases:
 
   - name: my-grafana
     namespace: monitoring
-    chart: grafana/grafana
+    chart: grafana-community/grafana
 ```
 
 Run `helmfile apply` again — Helmfile will detect the new release and only deploy what changed.
